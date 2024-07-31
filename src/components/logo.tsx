@@ -20,7 +20,7 @@ const Logo = () => {
             />
             <div className={cn(righteous.className, ' flex flex-col')}>
                 <p className='uppercase text-xs md:text-sm font-bold tracking-widest'><span className='text-green-600'>c</span>ontent</p>
-                <p className='uppercase text-xs md:text-sm font-bold tracking-widest'><span className='text-green-600'>c</span>rafter</p>
+                <p className='uppercase text-xs md:text-sm font-bold tracking-widest'><span className='text-green-600'>c</span>rafter<span className='text-white rounded-md p-1 text-center bg-green-600 font-light ml-1'>AI</span></p>
 
             </div>
 
