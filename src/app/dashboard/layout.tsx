@@ -1,8 +1,16 @@
+import SideBar from '@/components/sidebar'
 import React from 'react'
 
 const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     return (
-        <div>{children}</div>
+        <div className='flex'>
+            <div>
+                <SideBar />
+            </div>
+            <div>
+                {children}
+            </div>
+        </div>
     )
 }
 
