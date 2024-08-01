@@ -1,5 +1,6 @@
-import SideBar from '@/components/sidebar'
+
 import React from 'react'
+import SideBar from './_components/sidebar'
 
 const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
     return (
@@ -7,7 +8,7 @@ const DashboardLayout = ({ children }: Readonly<{ children: React.ReactNode }>) 
             <div className='hidden md:w-64 md:flex flex-col fixed h-screen'>
                 <SideBar />
             </div>
-            <div className='md:ml-64 bg-green-50 h-auto'>
+            <div className='md:ml-64 bg-green-100 h-auto'>
                 {children}
             </div>
         </div>

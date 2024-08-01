@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import Logo from './logo'
 import { menuList } from '@/lib/sidebar-menus'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { usePathname } from 'next/navigation'
+import Logo from '@/components/logo'
 
 const SideBar = () => {
     const path = usePathname()
