@@ -8,6 +8,7 @@ const QuillEditor = ({ value }: { value: string }) => {
         <ReactQuill
             theme='snow'
             value={value}
+            className='whitespace-pre-wrap'
         ></ReactQuill>
     )
 }

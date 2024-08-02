@@ -10,7 +10,8 @@ import React, { useState } from 'react'
 import QuillEditor from './_components/editor'
 import { NextResponse } from 'next/server'
 import { chatSession } from '@/lib/gemini-ai'
-
+import axios from 'axios'
+import { Loader } from 'lucide-react'
 interface templateSlug {
     templateSlug: string
 }
@@ -34,7 +35,14 @@ const TemplateSlugPage = ({ params }: { params: templateSlug }) => {
             const finalAIPrompt = JSON.stringify(dataSet) + "," + selectedPrompt
 
             const result = await chatSession.sendMessage(finalAIPrompt)
-            console.log(result.response.text())
+            setAiOutput(result.response.text())
+
+            const response = await axios.post('/api/gemini', {
+                title: dataSet.title,
+                description: result.response.text(),
+                templateUsed: selectedTemplate?.name
+            })
+            setIsLoading(false)
         } catch (error) {
             return new NextResponse('Internal error', { status: 500 })
         }
@@ -70,7 +78,7 @@ const TemplateSlugPage = ({ params }: { params: templateSlug }) => {
 
                     ))}
                     <div className='mt-5'>
-                        <Button>Generate</Button>
+                        <Button>{isLoading ? <Loader className='animate-spin' /> : "Generate"}</Button>
                     </div>
                 </div>
             </form>
@@ -78,7 +86,7 @@ const TemplateSlugPage = ({ params }: { params: templateSlug }) => {
                 <div className='mx-5 flex flex-col gap-3 mb-3'>
 
                     <h2 className='font-medium'>Generated Output</h2>
-                    <QuillEditor value={aiOutput} />
+                    <QuillEditor value={isLoading ? 'Generating' : aiOutput} />
                 </div>
             </div>
         </div>
