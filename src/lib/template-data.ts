@@ -29,6 +29,7 @@ export const templateData = [
       },
     ],
     textColor: 'text-red-600',
+    bgColor: 'bg-red-600'
   },
   {
     name: 'Youtube Video Idea',
@@ -52,6 +53,7 @@ export const templateData = [
       },
     ],
     textColor: 'text-red-600',
+    bgColor: 'bg-red-600'
   },
   {
     name: 'Instagram Hashtags',
@@ -75,6 +77,7 @@ export const templateData = [
       },
     ],
     textColor: 'text-pink-600',
+    bgColor: 'bg-pink-600',
   },
   {
     name: 'Tiktok Hashtags',
@@ -98,6 +101,7 @@ export const templateData = [
       },
     ],
     textColor: 'text-purple-600',
+    bgColor: 'bg-purple-600',
   },
   {
     name: 'Linkedin Post',
@@ -121,6 +125,7 @@ export const templateData = [
       },
     ],
     textColor: 'text-blue-600',
+    bgColor: 'bg-blue-600',
   },
   {
     name: 'Tweet',
@@ -144,5 +149,6 @@ export const templateData = [
       },
     ],
     textColor: 'text-blue-400',
+    bgColor: 'bg-blue-400',
   },
 ];
