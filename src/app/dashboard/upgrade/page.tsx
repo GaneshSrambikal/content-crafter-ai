@@ -12,6 +12,7 @@ import axios from 'axios'
 import { redirect, useRouter } from 'next/navigation'
 // import Razorpay from 'razorpay'
 const UpgradePage = () => {
+    const BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://content-crafter-ai.vercel.app/'
     const router = useRouter()
     const handlePayment = async (opts: string) => {
         if (opts === 'stripe') {
@@ -33,7 +34,7 @@ const UpgradePage = () => {
             console.log(response)
             const option: object = {
                 key: '',
-                amount: 10000,
+                amount: 19900,
                 currency,
                 name: 'Content Crafter AI',
                 description: '10,000 AI Credits',
@@ -53,9 +54,9 @@ const UpgradePage = () => {
 
                     const jsonRes = await validate.data
                     console.log('validate', jsonRes)
-                    router.push(`http://localhost:3000/dashboard`)
+                    router.push(`${BASE_URL}`)
                 },
-                
+
                 prefill: {
                     name: 'Content Crafter AI',
                     email: 'contentcrafter@gmail.com',

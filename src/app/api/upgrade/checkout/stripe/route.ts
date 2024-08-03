@@ -3,6 +3,8 @@ import { auth, currentUser } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 import { Stripe } from 'stripe';
 
+const envmt = process.env.NODE_ENV;
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: '2024-06-20',
 });
@@ -66,8 +68,16 @@ export async function POST(req: Request) {
         customer: stripeCustomer?.stripeCustomerId,
         line_items,
         mode: 'payment',
-        success_url: `http://localhost:3000/dashboard`,
-        cancel_url: `http://localhost:3000/dashboard/upgrade`,
+        success_url: `${
+          envmt === 'development'
+            ? 'http://localhost:3000/dashboard'
+            : 'https://content-crafter-ai.vercel.app/dashboard/'
+        }`,
+        cancel_url: `${
+          envmt === 'development'
+            ? 'http://localhost:3000/'
+            : 'https://content-crafter-ai.vercel.app/'
+        }`,
         metadata: {
           userId: userId,
         },
