@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
 const envmt = process.env.NODE_ENV;
- 
+
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: '2024-06-20',
 });
@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     event = stripe.webhooks.constructEvent(
       body,
       sig!,
-    process.env.STRIPE_WEBHOOK_SECRET! 
+      process.env.STRIPE_WEBHOOK_SECRET!
     );
   } catch (error) {
     return NextResponse.json({ error: 'Invalid Signature' }, { status: 400 });
@@ -45,7 +45,6 @@ export async function POST(req: Request) {
             totalCredit: 10000 + 10000,
           },
         });
-        
       } else {
         await db.user.update({
           where: {

@@ -9,14 +9,14 @@ import {
 } from "@/components/ui/popover"
 import Image from 'next/image'
 import axios from 'axios'
-import { useRouter } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
 // import Razorpay from 'razorpay'
 const UpgradePage = () => {
     const router = useRouter()
     const handlePayment = async (opts: string) => {
         if (opts === 'stripe') {
 
-            const response = await axios.post('/api/upgrade/checkout', {
+            const response = await axios.post('/api/upgrade/checkout/stripe', {
                 opts: opts
             })
             router.push(response.data.url)
@@ -41,8 +41,21 @@ const UpgradePage = () => {
                 order_id: response.id,
                 handler: async function (res: any) {
                     console.log('payment Captured')
+                    console.log(res)
+                    const { razorpay_payment_id, razorpay_order_id, razorpay_signature } = res
 
+                    const validate = await axios.post('/api/upgrade/checkout/razorpay/validate', {
+                        razorpay_order_id,
+                        razorpay_payment_id,
+                        razorpay_signature,
+
+                    })
+
+                    const jsonRes = await validate.data
+                    console.log('validate', jsonRes)
+                    router.push(`http://localhost:3000/dashboard`)
                 },
+                
                 prefill: {
                     name: 'Content Crafter AI',
                     email: 'contentcrafter@gmail.com',
