@@ -44,6 +44,9 @@ export async function POST(req: Request) {
         where: {
           userId: userId,
         },
+        select: {
+          stripeCustomerId: true,
+        },
       });
       // if stripe customer does exist
       if (!stripeCustomer) {
@@ -65,6 +68,9 @@ export async function POST(req: Request) {
         mode: 'payment',
         success_url: `http://localhost:3000/dashboard`,
         cancel_url: `http://localhost:3000/dashboard/upgrade`,
+        metadata: {
+          userId: userId,
+        },
       });
       return NextResponse.json({ url: session.url });
     }
