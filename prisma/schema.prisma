@@ -23,10 +23,11 @@ model AIOutput {
 }
 
 model Purchase {
-  id       String   @id @default(auto()) @map("_id") @db.ObjectId
-  userId   String
-  credit   Float
-  createAt DateTime @default(now())
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId         String
+  credit         Float
+  paymentGateway String
+  createAt       DateTime @default(now())
 }
 
 model StripeCustomer {
