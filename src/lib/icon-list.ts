@@ -25,11 +25,11 @@ export const iconList = [
     {
       name: 'linkedin',
       icon: FaLinkedin,
-      bgColor: 'bg-blue-400'
+      bgColor: 'bg-blue-600'
     },
     {
       name: 'tweet',
       icon: FaTwitter,
-      bgColor: 'bg-blue-600'
+      bgColor: 'bg-blue-400'
     }
   ]
