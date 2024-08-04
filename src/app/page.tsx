@@ -46,32 +46,33 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <Image
-                src="/hero550x550.png"
-                width="550"
-                height="550"
-                alt="Hero"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
-              />
+              <div className="relative mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square">
+                <div className="mt-5 p-2 relative">
+                  <Image src='/heropagedash.png' alt="dashboard" width={400} height={400} className="w-full rounded-md drop-shadow-lg object-cover" />
+                </div>
+                <div className="relative hidden md:block">
+                  <Image src='/heropagedashmob.png' alt="mobdash" height={200} width={200} className="shadow-lg absolute right-[100px] top-[-3rem]" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
         <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
-            <div className="grid max-w-5xl items-center gap-6 lg:grid-cols-2 lg:gap-12">
+            <div className=" grid max-w-5xl items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <Image
-                src="/blue550x310.png"
+                src="/youtubedes.gif"
                 width="550"
-                height="310"
+                height="510"
                 alt="Feature 1"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last shadow-lg"
               />
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl capitalize">YouTube video descriptions</h2>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Content Crafter will provide AI generated video descriptions and outline for your next youtube video. Just provide
-                    video title and description prompt. 
+                    video title and description prompt.
                   </p>
                 </div>
               </div>
@@ -85,36 +86,36 @@ export default function Home() {
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Instagram Captions!</h2>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Gain valuable insights to drive your business forward with our advanced analytics tools.
+                    Create hashfree instagram post captions and hashtags. No need to search for hour for that perfect caption.
                   </p>
                 </div>
               </div>
               <Image
-                src="/green550x310.png"
+                src="/instagramdes.gif"
                 width="550"
                 height="310"
                 alt="Feature 2"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full shadow-lg"
               />
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
             <div className="grid max-w-5xl items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <Image
-                src="/yellow550x310.png"
+                src="/tweetdes.gif"
                 width="550"
                 height="310"
                 alt="Feature 3"
+                unoptimized={true}
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
               />
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Scalable Solutions</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Twitter Post Outline</h2>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    Our platform is designed to grow with your business, ensuring youre always equipped to handle your
-                    evolving needs.
+                    Create Tweet Post outline and hashtags
                   </p>
                 </div>
               </div>

@@ -24,7 +24,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
-    --chart-1: 123, 62%, 65%;
+    --chart-1: 161, 94%, 30%;
     --chart-2: 15, 0%, 65%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
@@ -63,20 +63,20 @@
   * {
     @apply border-border;
   }
-  html{
-    scroll-behavior: smooth
+  html {
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;
   }
-  .purchase-list-type-icons{
+  .purchase-list-type-icons {
     list-style-type: square;
     list-style-position: inside;
     margin: 0;
     padding: 0;
     list-style: none;
   }
-  .purchase-list-type-icons li{
+  .purchase-list-type-icons li {
     margin: 0;
     padding: 0;
   }

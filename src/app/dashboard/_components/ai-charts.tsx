@@ -22,6 +22,7 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 export function AIChart({ availableCredit, totalUsage }: { availableCredit: number, totalUsage: number }) {
+    
     const [credits, setCredit] = useState(10000)
     const [usage, setUsage] = useState(0)
     const [isLoading, setIsLoading] = useState(false)
