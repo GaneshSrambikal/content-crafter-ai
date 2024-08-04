@@ -28,7 +28,7 @@ export default function Home() {
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     Create AI Generated descriptions, hashtags and outlines for your social media posts on YouTube, LinkedIn, Instagram, TikTok and X(formerly Twitter).
                   </p>
-                  <p className="max-w-[600px] text-muted-foreground md:text-md font-light">Powered by <span className="text-blue-800 font-medium">Google Gemini</span></p>
+                  <p className="max-w-[600px] text-muted-foreground md:text-md font-light">Powered by <Link href={`https://ai.google.dev/gemini-api`} target="_blank"><span className="text-blue-800 font-medium underline">Google Gemini</span> </Link></p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link
