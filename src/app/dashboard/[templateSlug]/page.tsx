@@ -13,6 +13,8 @@ import { chatSession } from '@/lib/gemini-ai'
 import axios from 'axios'
 import { Loader } from 'lucide-react'
 import GenerateButton from './_components/generate-button'
+import { auth } from '@clerk/nextjs/server'
+import { redirect } from 'next/navigation'
 interface templateSlug {
     templateSlug: string
 }
@@ -51,6 +53,7 @@ const TemplateSlugPage = ({ params }: { params: templateSlug }) => {
     const handleSubmit = async (formData: FormData) => {
         generateAIContent(formData)
     }
+     
     return (
         <div className='mx-5 py-2 min-h-full'>
             <div className='mt-5 py-6 px-4 bg-white rounded flex items-center gap-3'>

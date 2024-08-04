@@ -30,9 +30,9 @@ const DashboardList = ({ searchInput }: { searchInput: string }) => {
     }
   }, [searchInput])
   return (
-    <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mx-5 mt-5 shadow'>
+    <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mx-5 mt-5 shadow'>
       {templateList.map((template, index) => (
-        <div key={index}>
+        <div key={index} className='hover:translate-y-[-2px] transition duration-200'>
           <Link href={`/dashboard/${template.slug}`} className='bg-white w-full rounded h-[200px] flex flex-col justify-center items-center'>
             <template.icon className={cn(template.textColor, 'h-12 w-12 mx-auto')}></template.icon>
             <h2 className='mt-5 text-center font-semibold'>{template.name}</h2>
