@@ -51,7 +51,7 @@ export default function Home() {
                   <Image src='/heropagedash.png' alt="dashboard" width={400} height={400} className="w-full rounded-md drop-shadow-lg object-cover" />
                 </div>
                 <div className="relative hidden md:block">
-                  <Image src='/heropagedashmob.png' alt="mobdash" height={200} width={200} className="shadow-lg absolute right-[100px] top-[-3rem]" />
+                  <Image src='/heromob.gif' alt="mobdash" height={200} width={200} className="shadow-lg absolute right-[100px] top-[-5rem] rounded-t-3xl" />
                 </div>
               </div>
             </div>
