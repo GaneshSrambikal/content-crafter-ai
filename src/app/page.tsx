@@ -49,10 +49,10 @@ export default function Home() {
               </div>
               <div className="relative mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square">
                 <div className="mt-5 p-2 relative">
-                  <Image src='/heropagedash.png' alt="dashboard" width={400} height={400} className="w-full rounded-md drop-shadow-lg object-cover" />
+                  <Image src='/heropagedash.png' unoptimized={true} alt="dashboard" width={400} height={400} className="w-full rounded-md drop-shadow-lg object-cover" />
                 </div>
                 <div className="relative hidden md:block">
-                  <Image src='/heromob.gif' alt="mobdash" height={200} width={200} className="shadow-lg absolute right-[100px] top-[-5rem] rounded-t-3xl" />
+                  <Image src='/heromob.gif' unoptimized={true} alt="mobdash" height={200} width={200} className="shadow-lg absolute right-[100px] top-[-5rem] rounded-t-3xl" />
                 </div>
               </div>
             </div>
