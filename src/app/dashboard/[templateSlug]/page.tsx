@@ -12,6 +12,7 @@ import { NextResponse } from 'next/server'
 import { chatSession } from '@/lib/gemini-ai'
 import axios from 'axios'
 import { Loader } from 'lucide-react'
+import GenerateButton from './_components/generate-button'
 interface templateSlug {
     templateSlug: string
 }
@@ -62,7 +63,7 @@ const TemplateSlugPage = ({ params }: { params: templateSlug }) => {
                 <h2 className='font-medium'>{selectedTemplate?.name}</h2>
             </div>
             <form action={handleSubmit}>
-                <div className='flex flex-col gap-4 p-5 mt-5 bg-white'>
+                <div className='flex flex-col gap-4 p-5 mt-5 bg-white rounded'>
                     {selectedTemplate?.form.map((form, index) => (
                         <div key={index}>
 
@@ -79,6 +80,7 @@ const TemplateSlugPage = ({ params }: { params: templateSlug }) => {
                     ))}
                     <div className='mt-5'>
                         <Button>{isLoading ? <Loader className='animate-spin' /> : "Generate"}</Button>
+
                     </div>
                 </div>
             </form>
