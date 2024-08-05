@@ -13,6 +13,9 @@ const HistoryPage = async () => {
   const userHistory = await db.aIOutput.findMany({
     where: {
       userId: userId as string
+    },
+    orderBy: {
+      createdAt: 'desc'
     }
   })
 

@@ -29,7 +29,7 @@ export const templateData = [
       },
     ],
     textColor: 'text-red-600',
-    bgColor: 'bg-red-600'
+    bgColor: 'bg-red-600',
   },
   {
     name: 'Youtube Video Idea',
@@ -53,7 +53,7 @@ export const templateData = [
       },
     ],
     textColor: 'text-red-600',
-    bgColor: 'bg-red-600'
+    bgColor: 'bg-red-600',
   },
   {
     name: 'Instagram Hashtags',
