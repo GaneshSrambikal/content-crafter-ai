@@ -34,12 +34,12 @@ const iconList = [
     {
         name: 'Linkedin Post',
         icon: FaLinkedin,
-        bgColor: 'bg-blue-400'
+        bgColor: 'bg-blue-600'
     },
     {
         name: 'Tweet',
         icon: FaTwitter,
-        bgColor: 'bg-blue-600'
+        bgColor: 'bg-blue-400'
     }
 ]
 
